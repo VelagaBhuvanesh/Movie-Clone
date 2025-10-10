@@ -1,0 +1,21 @@
+/* Hide default cursor */
+body {
+    cursor: none;
+}
+
+/* Custom black cursor with white border */
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #000; /* black fill */
+    border: 2px solid #fff; /* white border */
+    border-radius: 50%;
+    pointer-events: none; /* allow clicks through cursor */
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+    z-index: 9999;
+    opacity: 1; /* visible by default */
+}
