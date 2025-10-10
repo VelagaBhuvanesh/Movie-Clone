@@ -1,0 +1,263 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  overflow-x: hidden;
+  color: white;
+  background-color: black;
+}
+
+/* Full-screen video */
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Content above video */
+.content {
+  position: relative;
+  z-index: 2;
+  margin: 0 5%;
+}
+
+/* Movie Info */
+.movie-info {
+  margin-top: 50px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.movie-genre {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+.movie-title {
+  font-family: 'Cinzel', serif;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
+}
+
+.movie-subtitle {
+  display: block;
+  margin-top: 0.1em;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.movie-details {
+  font-size: 1.2rem;
+  margin-top: 5px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+/* Story Section */
+.movie-story {
+  position: relative;
+  margin-top: 10%;
+  width: 60%;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.movie-story h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: none;
+  color: white;
+}
+
+.movie-story p {
+  font-size: 1.3rem;
+  text-shadow: none;
+}
+
+/* Audio Languages Section */
+.movie-languages {
+  position: relative;
+  margin-top: 70px;
+  width: 60%;
+  text-align: left;
+  z-index: 2;
+}
+
+.movie-languages h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.language-tags {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.language-tags span {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  text-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.language-tags span:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Cast Section */
+.cast-section {
+  margin-top: 10%;
+  margin-bottom: 100px;
+}
+
+.cast-section h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.cast-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* Glassmorphism Cast Cards */
+.cast-card {
+  width: 220px;
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.cast-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 40px rgba(255, 255, 255, 0.2);
+}
+
+.cast-card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.cast-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.cast-card p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Director Pointer Container */
+.director-pointer {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* Small pointer tab */
+.pointer-text {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 10px 15px;       /* increase padding to make tab bigger */
+  border-radius: 12px 0 0 12px; /* slightly more rounded corners */
+  color: white;
+  writing-mode: vertical-rl; /* vertical text */
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;          /* increase font size if needed */
+  transition: background 0.3s;
+}
+
+.pointer-text:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Director Card (hidden by default) */
+/* Director Card - bigger size */
+.director-card {
+  position: absolute;
+  right: 60px; /* distance from pointer tab */
+  top: 50%;
+  transform: translateY(-50%) translateX(100%);
+  width: 240px;      /* wider than before */
+  height: 380px;     /* taller for more space */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  text-align: center;
+  z-index: 10;
+}
+
+/* Show card on hover */
+.director-pointer:hover .director-card {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Director image */
+.director-card img {
+  width: 100%;
+  height: 220px;      /* bigger to fit properly */
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+
+.director-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+
+.director-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
