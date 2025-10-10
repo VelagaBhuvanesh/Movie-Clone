@@ -1,0 +1,235 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  overflow-x: hidden;
+  color: white;
+  background-color: black;
+}
+
+/* Fullscreen video */
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(60%);
+}
+
+/* Content above video */
+.content {
+  position: relative;
+  z-index: 1;
+  margin: 0 5%;
+}
+
+.movie-info {
+  margin-top: 60px;
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 60px; /* ⬅️ Adds space below title section */
+}
+
+.movie-genre {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+.movie-title {
+  font-family: 'Cinzel', serif;
+  font-size: 5rem;
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 15px rgba(255,140,0,0.8);
+}
+
+.movie-subtitle {
+  display: block;
+  margin-top: 0.1em;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: none;
+}
+
+.movie-details {
+  font-size: 1.2rem;
+  margin-top: 5px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+/* Audio Languages */
+.audio-languages {
+  margin-top: 25px;
+}
+
+.audio-languages h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.languages {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.lang-card {
+  padding: 6px 12px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  font-size: o.95rem;
+}
+
+/* Story Section */
+.movie-story {
+  margin-top: 10%; /* ⬅️ Adds space above the story section */
+  width: 65%;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.movie-story h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: none;
+}
+
+.movie-story p {
+  font-size: 1.3rem;
+}
+
+/* Director Card */
+/* Director Pointer (Container) */
+.director-pointer {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 15;
+}
+
+/* Vertical “Director” Tab */
+.pointer-text {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 12px 18px;
+  border-radius: 12px 0 0 12px;
+  color: white;
+  writing-mode: vertical-rl;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pointer-text:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* Director Card (hidden by default) */
+.director-card {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%) translateX(100%);
+  width: 260px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Show card on hover */
+.director-pointer:hover .director-card {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Director Image */
+.director-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+
+/* Director Text */
+.director-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  font-family: 'Cinzel', serif;
+}
+
+.director-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #e0e0e0;
+}
+
+
+/* Cast Cards */
+.cast-section {
+  margin-top: 40px;
+}
+
+.cast-section h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cast-cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cast-card {
+  width: 150px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  text-align: center;
+  padding: 12px;
+}
+
+.cast-card img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.cast-card p {
+  margin-top: 6px;
+  font-size: 1rem;
+}
