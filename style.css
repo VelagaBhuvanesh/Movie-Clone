@@ -1,0 +1,262 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  overflow-x: hidden;
+  color: white;
+  background-color: black;
+}
+
+/* Background Video */
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Content Wrapper */
+.content {
+  position: relative;
+  z-index: 1;
+  margin: 0 5%;
+}
+
+/* Movie Info */
+.movie-info {
+  margin-top: 60px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.movie-genre {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* Main Title (Bold) */
+.movie-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+}
+
+/* Subtitle (Normal & Smaller) */
+.movie-subtitle {
+  display: block;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+/* Details */
+.movie-details {
+  font-size: 1.2rem;
+  margin-top: 5px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* Story Section */
+.movie-story {
+  margin-top: 10%;
+  width: 60%;
+  line-height: 1.6;
+  text-align: left;
+  text-shadow: none; /* no glow */
+}
+
+.movie-story h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-shadow: none;
+}
+
+.movie-story p {
+  font-size: 1.3rem;
+}
+
+/* --- CAST SECTION --- */
+.cast-section {
+  margin-top: 80px;
+  position: relative;
+  z-index: 2; /* make sure it's above video */
+  text-align: left;
+  padding-left: 5%;
+  padding-bottom: 100px; /* space before end */
+}
+
+.cast-section h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.cast-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Glassmorphism Cast Cards */
+.cast-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cast-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.cast-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.cast-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.cast-card p {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+/* --- DIRECTOR POINTER --- */
+.director-pointer {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Pointer Tab */
+.pointer-text {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 12px 18px;
+  border-radius: 12px 0 0 12px;
+  color: white;
+  writing-mode: vertical-rl;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pointer-text:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Director Card */
+.director-card {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%) translateX(100%);
+  width: 260px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Show on hover */
+.director-pointer:hover .director-card {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Director Image */
+.director-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+
+.director-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  font-family: 'Cinzel', serif;
+}
+
+.director-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #e0e0e0;
+}
+
+/* --- Audio Languages --- */
+.audio-languages {
+  margin-top: 3%;
+  margin-bottom: 40px;
+}
+
+.audio-languages h3 {
+  font-size: 1.5rem;
+  opacity: 0.85;
+  margin-bottom: 10px;
+}
+
+.audio-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.audio-buttons button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1rem;
+  padding: 6px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.audio-buttons button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
