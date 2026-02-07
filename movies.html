@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamVibe - Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fas fa-play-circle"></i>
+            <span>StreamVibe</span>
+        </div>
+        <div class="nav-items">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="movies.html" class="nav-item active">
+                <i class="fas fa-film"></i>
+                <span>Movies</span>
+            </a>
+            <a href="series.html" class="nav-item">
+                <i class="fas fa-tv"></i>
+                <span>Series</span>
+            </a>
+            <a href="anime.html" class="nav-item">
+                <i class="fas fa-dragon"></i>
+                <span>Anime</span>
+            </a>
+            <a href="favourites.html" class="nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Favourites</span>
+            </a>
+            <div class="nav-item dropdown">
+                <i class="fas fa-globe"></i>
+                <span>Languages</span>
+                <div class="dropdown-content">
+                    <a href="#">Tamil</a>
+                    <a href="#">Telugu</a>
+                    <a href="#">English</a>
+                    <a href="#">Japanese</a>
+                    <a href="#">Spanish</a>
+                    <a href="#">Hindi</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Overlay for movie details -->
+        <div class="movie-overlay">
+            <div class="movie-info">
+                <h1 class="movie-title"></h1>
+                <p class="movie-description"></p>
+
+                <div class="ratings">
+                    <div class="rating">
+                        <i class="fab fa-imdb rating-icon"></i>
+                        <div>
+                            <div class="rating-value"></div>
+                            <div class="rating-source">IMDb</div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-utensils rating-icon"></i>
+                        <div>
+                            <div class="rating-value"></div>
+                            <div class="rating-source">Rotten Tomatoes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="watch-trailer">
+                    <i class="fas fa-play"></i>
+                    Watch Trailer
+                </button>
+
+                <div class="cast-section">
+                    <h3>Cast</h3>
+                    <div class="cast-scroll"></div>
+                </div>
+            </div>
+            <button class="close-overlay">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Movies Thumbnails -->
+        <div class="content-sections active">
+            <section class="content-section">
+                <h2 class="section-title">All Movies</h2>
+                <div class="thumbnails-grid" id="thumbnails-grid">
+                    <!-- Existing movie thumbnails will stay -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Oppenheimer Static Overlay for preview if needed -->
+    <div class="movie-overlay" id="oppenheimer-overlay">
+        <video autoplay muted playsinline loop id="bg-video">
+            <source src="oppenhei" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="content">
+            <!-- Movie Info -->
+            <div class="movie-info">
+                <p class="movie-genre">Biography • Drama • History</p>
+                <h1 class="movie-title">
+                    Oppenheimer<br>
+                    <span class="movie-subtitle">The Destroyer of Worlds</span>
+                </h1>
+                <p class="movie-details">2023 • ⭐ 8.9 • 🍅 93%</p>
+
+                <!-- Audio Languages -->
+                <div class="audio-languages">
+                    <h3>Audio</h3>
+                    <div class="languages">
+                        <div class="lang-card">English</div>
+                        <div class="lang-card">हिन्दी</div>
+                        <div class="lang-card">Español</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story Section -->
+            <div class="movie-story">
+                <h2>STORY</h2>
+                <p>
+                    “Oppenheimer” follows the life of theoretical physicist J. Robert Oppenheimer, the brilliant yet tormented mind behind the creation of the atomic bomb. Directed by Christopher Nolan, this historical epic captures the moral paradox of scientific progress — the genius that shaped the world and the guilt that shattered a man. Set against the backdrop of the Manhattan Project, it’s a story of ambition, intellect, and the haunting cost of power.
+                </p>
+            </div>
+
+            <!-- Director Pointer -->
+            <div class="director-pointer">
+                <div class="pointer-text">Director</div>
+                <div class="director-card">
+                    <img src="christopher-nolan.jpg" alt="Christopher Nolan">
+                    <h3>Christopher Nolan</h3>
+                    <p>Visionary filmmaker behind "Oppenheimer", "Inception", and "The Dark Knight Trilogy". Known for his intricate storytelling and cinematic precision.</p>
+                </div>
+            </div>
+
+            <!-- Cast Cards -->
+            <div class="cast-section">
+                <h3>CAST</h3>
+                <div class="cast-cards">
+                    <div class="cast-card">
+                        <img src="cillian-murphy.jpg" alt="Cillian Murphy">
+                        <p>Cillian Murphy</p>
+                    </div>
+                    <div class="cast-card">
+                        <img src="emily-blunt.jpg" alt="Emily Blunt">
+                        <p>Emily Blunt</p>
+                    </div>
+                    <div class="cast-card">
+                        <img src="robert-downey.jpg" alt="Robert Downey Jr.">
+                        <p>Robert Downey Jr.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="close-overlay">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
