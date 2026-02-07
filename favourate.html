@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamVibe - Favourites</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fas fa-play-circle"></i>
+            <span>StreamVibe</span>
+        </div>
+        <div class="nav-items">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="movies.html" class="nav-item">
+                <i class="fas fa-film"></i>
+                <span>Movies</span>
+            </a>
+            <a href="series.html" class="nav-item">
+                <i class="fas fa-tv"></i>
+                <span>Series</span>
+            </a>
+            <a href="anime.html" class="nav-item">
+                <i class="fas fa-dragon"></i>
+                <span>Anime</span>
+            </a>
+            <a href="favourites.html" class="nav-item active">
+                <i class="fas fa-heart"></i>
+                <span>Favourites</span>
+            </a>
+            <div class="nav-item dropdown">
+                <i class="fas fa-globe"></i>
+                <span>Languages</span>
+                <div class="dropdown-content">
+                    <a href="#">Tamil</a>
+                    <a href="#">Telugu</a>
+                    <a href="#">English</a>
+                    <a href="#">Japanese</a>
+                    <a href="#">Spanish</a>
+                    <a href="#">Hindi</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Favourite Overlay -->
+        <div class="movie-overlay">
+            <div class="movie-info">
+                <h1 class="movie-title"></h1>
+                <p class="movie-description"></p>
+
+                <div class="ratings">
+                    <div class="rating">
+                        <i class="fab fa-imdb rating-icon"></i>
+                        <div>
+                            <div class="rating-value"></div>
+                            <div class="rating-source">IMDb</div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-utensils rating-icon"></i>
+                        <div>
+                            <div class="rating-value"></div>
+                            <div class="rating-source">Rotten Tomatoes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="watch-trailer">
+                    <i class="fas fa-play"></i>
+                    Watch Trailer
+                </button>
+
+                <div class="cast-section">
+                    <h3>Cast</h3>
+                    <div class="cast-scroll"></div>
+                </div>
+            </div>
+            <button class="close-overlay">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Favourites Content -->
+        <div class="content-sections active">
+            <section class="content-section">
+                <h2 class="section-title">Your Favourites</h2>
+                
+                <div class="favourites-message" id="favourites-message">
+                    <i class="fas fa-heart"></i>
+                    <h3>Your favourite content will appear here</h3>
+                    <p>Like movies, series, or anime to see them in your favourites</p>
+                </div>
+
+                <div class="thumbnails-grid" id="favourites-grid">
+                    <!-- Favourite thumbnails dynamically populated via JS -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
