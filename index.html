@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamVibe</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="loading.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ---------------- Loading Screen ---------------- -->
+    <div class="loader" id="loader">
+        <div class="trivia" id="trivia">Loading trivia...</div>
+        <div class="loading-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+
+    <!-- ---------------- Sidebar ---------------- -->
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fas fa-play-circle"></i>
+            <span>StreamVibe</span>
+        </div>
+        <div class="nav-items">
+            <a href="index.html" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="movies.html" class="nav-item">
+                <i class="fas fa-film"></i>
+                <span>Movies</span>
+            </a>
+            <a href="series.html" class="nav-item">
+                <i class="fas fa-tv"></i>
+                <span>Series</span>
+            </a>
+            <a href="anime.html" class="nav-item">
+                <i class="fas fa-dragon"></i>
+                <span>Anime</span>
+            </a>
+            <a href="favourites.html" class="nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Favourites</span>
+            </a>
+            <div class="nav-item dropdown">
+                <i class="fas fa-globe"></i>
+                <span>Languages</span>
+                <div class="dropdown-content">
+                    <a href="#">Tamil</a>
+                    <a href="#">Telugu</a>
+                    <a href="#">English</a>
+                    <a href="#">Japanese</a>
+                    <a href="#">Spanish</a>
+                    <a href="#">Hindi</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------- Main Content ---------------- -->
+    <div class="main-content" id="main-content" style="display:none;">
+
+        <!-- Coolie Movie Overlay -->
+        <div class="movie-overlay active" id="coolie-overlay">
+            <video autoplay muted loop playsinline id="bg-video">
+                <source src="coolie trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="content">
+                <!-- Movie Info -->
+                <div class="movie-info">
+                    <p class="movie-genre">Action • Drama</p>
+                    <h1 class="movie-title">
+                        Coolie<br>
+                        <span class="movie-subtitle">The Powerhouse</span>
+                    </h1>
+
+                    <div class="audio-languages">
+                        <p class="movie-details">2023 • ⭐ 8.5</p>
+                        <h3>Audio</h3>
+                        <div class="languages">
+                            <span>हिंदी</span>
+                            <span>தமிழ்</span>
+                            <span>తెలుగు</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story -->
+                <div class="movie-story">
+                    <h2>STORY</h2>
+                    <p>
+                        "Coolie" follows the thrilling journey of the legendary superstar Rajinikanth, showcasing high-octane action, emotional drama, and his unbeatable charisma. The movie captures his struggle, triumph, and larger-than-life persona in the modern cinematic world.
+                    </p>
+                </div>
+
+                <!-- Cast Section -->
+                <div class="cast-section">
+                    <h3>Cast</h3>
+                    <div class="cast-cards">
+                        <div class="cast-card">
+                            <img src="rajanikhant.jpeg" alt="Rajinikanth">
+                            <h4>Rajinikanth</h4>
+                            <p>Deva</p>
+                        </div>
+                        <div class="cast-card">
+                            <img src="nagarjuna.jpeg" alt="Nagarjuna Akkineni">
+                            <h4>Nagarjuna Akkineni</h4>
+                            <p>Simon</p>
+                        </div>
+                        <div class="cast-card">
+                            <img src="soubin.jpeg" alt="Soubin Shahir">
+                            <h4>Soubin Shahir</h4>
+                            <p>Dayal</p>
+                        </div>
+                        <div class="cast-card">
+                            <img src="upendra.jpeg" alt="Upendra">
+                            <h4>Upendra</h4>
+                            <p>Kaleesha</p>
+                        </div>
+                        <div class="cast-card">
+                            <img src="aamir.jpeg" alt="Aamir Khan">
+                            <h4>Aamir Khan</h4>
+                            <p>Dahaa (Cameo Role)</p>
+                        </div>
+                        <div class="cast-card">
+                            <img src="sruthi.jpeg" alt="Shruti Haasan">
+                            <h4>Shruti Haasan</h4>
+                            <p>Preethi</p>
+                        </div>
+                        <div class="cast-card">
+                            <img src="sathyaraj.jpg" alt="Sathyaraj">
+                            <h4>Sathyaraj</h4>
+                            <p>Rajasekar</p>
+                        </div>
+                        <div class="cast-card">
+                            <img src="pooja.jpeg" alt="Pooja Hegde">
+                            <h4>Pooja Hegde</h4>
+                            <p>Monica</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Director -->
+                <div class="director-pointer">
+                    <div class="pointer-text">Director</div>
+                    <div class="director-card">
+                        <img src="coolidirector.jpeg" alt="Director">
+                        <h3>Director Name</h3>
+                        <p>Directed "Coolie" (2023). Famous for action-packed storytelling and cinematic visuals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Thumbnails Section -->
+        <div class="content-sections active" id="thumbnails-section">
+            <!-- Your 5-card movie rows will go here -->
+        </div>
+    </div>
+
+    <!-- Main JS -->
+    <script src="script.js"></script>
+
+    <!-- ---------------- Loader JS ---------------- -->
+    <script>
+        window.addEventListener("load", function() {
+            const loader = document.getElementById("loader");
+            const mainContent = document.getElementById("main-content");
+
+            // Show loader for 2.5s then reveal main content
+            setTimeout(() => {
+                loader.style.display = "none";
+                mainContent.style.display = "block";
+            }, 2500);
+
+            // Optional: Load trivia dynamically
+            const triviaArray = [
+                "Did you know? Rajinikanth's movies have a cult following.",
+                "Coolie was released in 2023.",
+                "StreamVibe makes streaming fun!"
+            ];
+            const triviaElem = document.getElementById("trivia");
+            let idx = 0;
+            setInterval(() => {
+                triviaElem.textContent = triviaArray[idx % triviaArray.length];
+                idx++;
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
