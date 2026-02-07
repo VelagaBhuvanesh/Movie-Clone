@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamVibe - Anime</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fas fa-play-circle"></i>
+            <span>StreamVibe</span>
+        </div>
+        <div class="nav-items">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="movies.html" class="nav-item">
+                <i class="fas fa-film"></i>
+                <span>Movies</span>
+            </a>
+            <a href="series.html" class="nav-item">
+                <i class="fas fa-tv"></i>
+                <span>Series</span>
+            </a>
+            <a href="anime.html" class="nav-item active">
+                <i class="fas fa-dragon"></i>
+                <span>Anime</span>
+            </a>
+            <a href="favourites.html" class="nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Favourites</span>
+            </a>
+            <div class="nav-item dropdown">
+                <i class="fas fa-globe"></i>
+                <span>Languages</span>
+                <div class="dropdown-content">
+                    <a href="#">Tamil</a>
+                    <a href="#">Telugu</a>
+                    <a href="#">English</a>
+                    <a href="#">Japanese</a>
+                    <a href="#">Spanish</a>
+                    <a href="#">Hindi</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Overlay for Anime Details -->
+        <div class="movie-overlay">
+            <video autoplay muted loop playsinline id="bg-video">
+                <source src="attack-on-titan-trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="movie-info">
+                <p class="movie-genre">Action • Dark Fantasy • Drama</p>
+                <h1 class="movie-title">Attack On Titan</h1>
+                <p class="movie-details">2013–2023 • ⭐ 9.0 • 🍅 94%</p>
+
+                <!-- Audio Languages -->
+                <div class="audio-languages">
+                    <p class="audio-heading">Audio</p>
+                    <div class="audio-buttons">
+                        <button>English</button>
+                        <button>हिंदी</button>
+                        <button>日本語</button>
+                        <button>Español</button>
+                    </div>
+                </div>
+
+                <!-- Story -->
+                <div class="movie-story">
+                    <h2>STORY</h2>
+                    <p>
+                        Humanity is on the brink of extinction due to giant humanoid creatures known as Titans. Eren Yeager, along with Mikasa and Armin, joins the Scout Regiment to fight back and uncover the truth behind the Titans. The epic story combines action, mystery, and emotional depth as secrets unravel about the world and humanity’s struggle for survival.
+                    </p>
+                </div>
+
+                <!-- Cast -->
+                <div class="cast-section">
+                    <h3>CAST</h3>
+                    <div class="cast-cards">
+                        <div class="cast-card">
+                            <img src="eren.jpg" alt="Eren Yeager">
+                            <h3>Eren Yeager</h3>
+                        </div>
+                        <div class="cast-card">
+                            <img src="mikasa.jpg" alt="Mikasa Ackerman">
+                            <h3>Mikasa Ackerman</h3>
+                        </div>
+                        <div class="cast-card">
+                            <img src="armin.jpg" alt="Armin Arlert">
+                            <h3>Armin Arlert</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Director -->
+                <div class="director-pointer">
+                    <div class="pointer-text">Director</div>
+                    <div class="director-card">
+                        <img src="tetsuro.jpg" alt="Tetsuro Araki">
+                        <h3>Tetsuro Araki</h3>
+                        <p>Director of Attack on Titan (2013–2023). Known for his intense and dynamic storytelling style in anime.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="close-overlay">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Anime Thumbnails -->
+        <div class="content-sections active">
+            <section class="content-section">
+                <h2 class="section-title">All Anime</h2>
+                <div class="thumbnails-grid" id="thumbnails-grid">
+                    <!-- Anime cards dynamically populated via JS -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
